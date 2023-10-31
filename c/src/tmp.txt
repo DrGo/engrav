@@ -1,0 +1,72 @@
+argv) at abcm2ps.c:562>:
+    usage() <void usage (void) at abcm2ps.c:430>:
+        display_version() <void display_version (int full) at abcm2ps.c:404>:
+        init_outbuf() <void init_outbuf (int kbsz) at buffer.c:755>:
+        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>:
+    init_deco() <void init_deco (void) at deco.c:2571>:
+    wherefmtdir() <void wherefmtdir (void) at abcm2ps.c:488>:
+    pg_init() <void pg_init (void) at subs.c:319>:
+    open_fout() <void open_fout (void) at buffer.c:64> (R):
+        strext() <void strext (char *fn, char *ext) at abcm2ps.c:390>:
+        cutext() <void cutext (char *fid) at buffer.c:54>:
+        close_output_file() <void close_output_file (void) at buffer.c:265> (R):
+            write_buffer() <void write_buffer (void) at buffer.c:772> (R):
+                init_page() <void init_page (void) at buffer.c:536> (R):
+                    define_svg_symbols() <void define_svg_symbols (char *title, int num, float w, float h) at svg.c:1183>:
+                        gen_info() <void gen_info (void) at svg.c:1106>:
+                        define_head() <void define_head (float w, h) at svg.c:1148>:
+                        elts_reset() <void elts_reset (void) at svg.c:750>:
+                            elts_link() <void elts_link (struct elt_s *e) at svg.c:735>:
+                        svg_write() <void svg_write (char *buf, int len) at svg.c:4373> (R):
+                            elt_new() <struct elt_s *elt_new (void) at svg.c:766>:
+                            elt_free() <void elt_free (struct elt_s *e) at svg.c:789> (R):
+                            setg() <void setg (int newg) at svg.c:1404> (R):
+                                defg1() <void defg1 (void) at svg.c:1355> (R):
+                                    setg() <void setg (int newg) at svg.c:1404> (recursive: see 126) [see 126]
+                                output_font() <void output_font (int span) at svg.c:1284>:
+                                    fprintf()
+                            elt_free() <void elt_free (struct elt_s *e) at svg.c:789> (recursive: see 121) [see 121]
+                        svg_write() <void svg_write (char *buf, int len) at svg.c:4373> (recursive: see 110) [see 110]
+                    user_ps_write() <void user_ps_write (void) at subs.c:1865>:
+                        svg_output() <int svg_output (FILE *out, const char *fmt, ...) at svg.c:4630>:
+                            svg_write() <void svg_write (char *buf, int len) at svg.c:4373> (R): [see 110]
+                    svg_output() <int svg_output (FILE *out, const char *fmt, ...) at svg.c:4630>:
+                        svg_write() <void svg_write (char *buf, int len) at svg.c:4373> (R): [see 110]
+                    svg_output() <int svg_output (FILE *out, const char *fmt, ...) at svg.c:4630>: [see 286]
+                    svg_write() <void svg_write (char *buf, int len) at svg.c:4373> (R): [see 110]
+                user_ps_write() <void user_ps_write (void) at subs.c:1865>: [see 276]
+                format_hf() <void format_hf (char *d, char *p) at buffer.c:327>:
+                    cnv_date() <void cnv_date (time_t *ltime) at buffer.c:114>:
+                        tex_str() <float tex_str (char *s) at subs.c:145>:
+                            cwid() <float cwid (unsigned char c) at subs.c:133>:
+                            strw() <float strw (char *s) at svg.c:1338>:
+                        output_font() <void output_font (int span) at svg.c:1284>: [see 133]
+                        xml_str_out() <void xml_str_out (char *p) at svg.c:1073>: [see 99]
+                    fopen()
+                    user_ps_write() <void user_ps_write (void) at subs.c:1865>:
+                        fopen()
+                        fgets()
+                        svg_write() <void svg_write (char *buf, int len) at svg.c:4373> (R): [see 110]
+                output() <int (*output) (FILE *out, const char *fmt, ...) at buffer.c:47>
+                svg_output() <int svg_output (FILE *out, const char *fmt, ...) at svg.c:4630>: [see 286]
+                svg_write() <void svg_write (char *buf, int len) at svg.c:4373> (R): [see 110]
+            close_page() <void close_page (void) at buffer.c:303>:
+                svg_close() <void svg_close (void) at svg.c:4642>:
+                    elt_lst_dump() <void elt_lst_dump (struct elt_s *e) at svg.c:882>: [see 145]
+                    elt_free() <void elt_free (struct elt_s *e) at svg.c:789> (R): [see 121]
+                close_fout() <void close_fout (void) at buffer.c:242>:
+                    printf()
+            close_page() <void close_page (void) at buffer.c:303>: [see 418]
+        fopen()
+        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+    read_def_format() <void read_def_format (void) at abcm2ps.c:381> (R):
+        treat_file() <void treat_file (char *fn, char *ext) at abcm2ps.c:183> (R):
+            read_def_format() <void read_def_format (void) at abcm2ps.c:381> (recursive: see 449) [see 449]
+            read_file() <char *read_file (char *fn, char *ext) at abcm2ps.c:126>:
+                malloc()
+                fread()
+                realloc()
+            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+        treat_file() <void treat_file (char *fn, char *ext) at abcm2ps.c:183> (recursive: see 297) [see 297]
+    read_def_format() <void read_def_format (void) at abcm2ps.c:381> (recursive: see 267) [see 267]
+

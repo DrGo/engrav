@@ -1,0 +1,1659 @@
+main() <int main (int argc, char **argv) at abcm2ps.c:562>:
+    usage() <void usage (void) at abcm2ps.c:430>:
+        display_version() <void display_version (int full) at abcm2ps.c:404>:
+            strcmp()
+            fputs()
+            fprintf()
+        printf()
+        exit()
+    init_outbuf() <void init_outbuf (int kbsz) at buffer.c:755>:
+        free()
+        malloc()
+        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>:
+            fprintf()
+            va_start()
+            vfprintf()
+            va_end()
+        exit()
+    display_version() <void display_version (int full) at abcm2ps.c:404>: [see 3]
+    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+    strlen()
+    sscanf()
+    strcpy()
+    strchr()
+    clrarena() <void clrarena (int level) at abcm2ps.c:1043>:
+        malloc()
+    set_format() <void set_format (void) at format.c:353>:
+        memset()
+        lock_fmt() <void lock_fmt (void *fmt) at format.c:1354>:
+        strdup()
+        fontspec() <void fontspec (struct FONTSPEC *f, const char *name, int encoding, float size) at format.c:228>:
+            get_font() <int get_font (const char *fname, int encoding) at format.c:171>:
+                strcmp()
+                error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                strchr()
+                strdup()
+            strncmp()
+            strcmp()
+            dfont_set() <int dfont_set (struct FONTSPEC *f) at format.c:211>:
+                error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                memcpy()
+        set_infoname() <void set_infoname (char *p) at format.c:315>:
+            getarena() <void *getarena (int len) at abcm2ps.c:1068>:
+                error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                exit()
+                malloc()
+            memset()
+            strlen()
+            strcpy()
+    init_deco() <void init_deco (void) at deco.c:2571>:
+        memset()
+    wherefmtdir() <void wherefmtdir (void) at abcm2ps.c:488>:
+        readlink()
+        strrchr()
+        strncmp()
+        strcpy()
+        fopen()
+        fclose()
+        strdup()
+    pg_init() <void pg_init (void) at subs.c:319>:
+        pango_font_map_create_context()
+        pango_cairo_font_map_get_default()
+        pango_layout_new()
+        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+        pango_layout_set_wrap()
+        g_string_sized_new()
+    open_fout() <void open_fout (void) at buffer.c:64> (R):
+        strcpy()
+        strlen()
+        strrchr()
+        strext() <void strext (char *fn, char *ext) at abcm2ps.c:390>:
+            strrchr()
+            strcat()
+        cutext() <void cutext (char *fid) at buffer.c:54>:
+            strrchr()
+        strncmp()
+        sprintf()
+        strcmp()
+        close_output_file() <void close_output_file (void) at buffer.c:265> (R):
+            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+            write_buffer() <void write_buffer (void) at buffer.c:772> (R):
+                init_page() <void init_page (void) at buffer.c:536> (R):
+                    open_fout() <void open_fout (void) at buffer.c:64> (recursive: see 66) [see 66]
+                    define_svg_symbols() <void define_svg_symbols (char *title, int num, float w, float h) at svg.c:1183>:
+                        strrchr()
+                        fputs()
+                        gen_info() <void gen_info (void) at svg.c:1106>:
+                            time()
+                            strftime()
+                            localtime()
+                            fprintf()
+                            strchr()
+                            fputc()
+                            fputs()
+                        fprintf()
+                        define_head() <void define_head (float w, float h) at svg.c:1148>:
+                            fprintf()
+                            strchr()
+                            fputs()
+                        xml_str_out() <void xml_str_out (char *p) at svg.c:1073>:
+                            strncmp()
+                            fwrite()
+                            fputs()
+                        memset()
+                        strdup()
+                        memcpy()
+                        elts_reset() <void elts_reset (void) at svg.c:750>:
+                            calloc()
+                            elts_link() <void elts_link (struct elt_s *e) at svg.c:735>:
+                                free()
+                        svg_write() <void svg_write (char *buf, int len) at svg.c:4373> (R):
+                            strncmp()
+                            fwrite()
+                            fputs()
+                            elt_new() <struct elt_s *elt_new (void) at svg.c:766>:
+                                calloc()
+                                fprintf()
+                                elts_link() <void elts_link (struct elt_s *e) at svg.c:735>: [see 108]
+                            strdup()
+                            push() <void push (struct elt_s *e) at svg.c:928>:
+                            fprintf()
+                            elt_free() <void elt_free (struct elt_s *e) at svg.c:789> (R):
+                                free()
+                                elt_free() <void elt_free (struct elt_s *e) at svg.c:789> (recursive: see 121) [see 121]
+                            sscanf()
+                            strstr()
+                            setg() <void setg (int newg) at svg.c:1404> (R):
+                                fputs()
+                                memcmp()
+                                defg1() <void defg1 (void) at svg.c:1355> (R):
+                                    setg() <void setg (int newg) at svg.c:1404> (recursive: see 126) [see 126]
+                                    fprintf()
+                                    fputs()
+                                    output_font() <void output_font (int span) at svg.c:1284>:
+                                        fprintf()
+                                        strchr()
+                                        strstr()
+                                    memcpy()
+                            malloc()
+                            isdigit()
+                            strtol()
+                            ps_exec() <void ps_exec (char *op) at svg.c:1842> (R):
+                                fprintf()
+                                stack_dump() <void stack_dump (void) at svg.c:934>:
+                                    fprintf()
+                                    elt_lst_dump() <void elt_lst_dump (struct elt_s *e) at svg.c:882>:
+                                        elt_dump() <void elt_dump (struct elt_s *e) at svg.c:856> (R):
+                                            fprintf()
+                                            elt_dump() <void elt_dump (struct elt_s *e) at svg.c:856> (recursive: see 146) [see 146]
+                                ps_sym_lookup() <struct ps_sym_s *ps_sym_lookup (char *name) at svg.c:890>:
+                                    strcmp()
+                                seq_exec() <int seq_exec (struct elt_s *e) at svg.c:1794> (R):
+                                    strcmp()
+                                    ps_exec() <void ps_exec (char *op) at svg.c:1842> (recursive: see 141) [see 141]
+                                    elt_dup() <struct elt_s *elt_dup (struct elt_s *e) at svg.c:815> (R):
+                                        elt_new() <struct elt_s *elt_new (void) at svg.c:766>: [see 114]
+                                        strdup()
+                                        elt_dup() <struct elt_s *elt_dup (struct elt_s *e) at svg.c:815> (recursive: see 154) [see 154]
+                                    push() <void push (struct elt_s *e) at svg.c:928>: [see 119]
+                                pop() <struct elt_s *pop (int type) at svg.c:944>:
+                                    fprintf()
+                                    stack_dump() <void stack_dump (void) at svg.c:934>: [see 143]
+                                pop_free_str() <char *pop_free_str (void) at svg.c:977>:
+                                    pop() <struct elt_s *pop (int type) at svg.c:944>: [see 159]
+                                free()
+                                ps_sym_def() <struct ps_sym_s *ps_sym_def (char *name, struct elt_s *e) at svg.c:907>:
+                                    ps_sym_lookup() <struct ps_sym_s *ps_sym_lookup (char *name) at svg.c:890>: [see 149]
+                                    elt_free() <void elt_free (struct elt_s *e) at svg.c:789> (R): [see 121]
+                                    fprintf()
+                                    strdup()
+                                strcmp()
+                                xysym() <void xysym (char *op, int use) at svg.c:1524> (R):
+                                    def_use() <void def_use (int def) at svg.c:1470> (R):
+                                        ps_exec() <void ps_exec (char *op) at svg.c:1842> (recursive: see 141) [see 141]
+                                        setg() <void setg (int newg) at svg.c:1404> (R): [see 126]
+                                        fputs()
+                                    pop_free_val() <float pop_free_val (void) at svg.c:965>:
+                                        pop() <struct elt_s *pop (int type) at svg.c:944>: [see 159]
+                                    fprintf()
+                                pop_free_val() <float pop_free_val (void) at svg.c:965>: [see 176]
+                                show() <void show (char type) at svg.c:1680>:
+                                    memcmp()
+                                    defg1() <void defg1 (void) at svg.c:1355> (R): [see 129]
+                                    pop_free_val() <float pop_free_val (void) at svg.c:965>: [see 176]
+                                    fprintf()
+                                    pop_free_str() <char *pop_free_str (void) at svg.c:977>: [see 162]
+                                    strw() <float strw (char *s) at svg.c:1338>:
+                                        cwid() <float cwid (unsigned char c) at subs.c:133>:
+                                    strchr()
+                                    output_font() <void output_font (int span) at svg.c:1284>: [see 133]
+                                    fputs()
+                                    xml_str_out() <void xml_str_out (char *p) at svg.c:1073>: [see 99]
+                                    strlen()
+                                    setg() <void setg (int newg) at svg.c:1404> (R): [see 126]
+                                    free()
+                                cos()
+                                sinf()
+                                path_print() <void path_print (char *fmt, ...) at svg.c:1431>:
+                                    va_start()
+                                    vsnprintf()
+                                    va_end()
+                                    malloc()
+                                    strlen()
+                                    realloc()
+                                    fprintf()
+                                    exit()
+                                    strcpy()
+                                path_def() <void path_def (void) at svg.c:1453>:
+                                    setg() <void setg (int newg) at svg.c:1404> (R): [see 126]
+                                    path_print() <void path_print (char *fmt, ...) at svg.c:1431>: [see 197]
+                                cosf()
+                                arp_ltr() <void arp_ltr (char type) at svg.c:1593> (R):
+                                    def_use() <void def_use (int def) at svg.c:1470> (R): [see 172]
+                                    pop_free_val() <float pop_free_val (void) at svg.c:965>: [see 176]
+                                    fprintf()
+                                atan()
+                                setg() <void setg (int newg) at svg.c:1404> (R): [see 126]
+                                ps_exec() <void ps_exec (char *op) at svg.c:1842> (recursive: see 141) [see 141]
+                                strlen()
+                                def_use() <void def_use (int def) at svg.c:1470> (R): [see 172]
+                                setxysym() <void setxysym (char *op, int use) at svg.c:1554> (R):
+                                    pop_free_val() <float pop_free_val (void) at svg.c:965>: [see 176]
+                                    setxory() <void setxory (char *s, float v) at svg.c:1536>:
+                                        ps_sym_lookup() <struct ps_sym_s *ps_sym_lookup (char *name) at svg.c:890>: [see 149]
+                                        elt_new() <struct elt_s *elt_new (void) at svg.c:766>: [see 114]
+                                        ps_sym_def() <struct ps_sym_s *ps_sym_def (char *name, struct elt_s *e) at svg.c:907>: [see 165]
+                                    def_use() <void def_use (int def) at svg.c:1470> (R): [see 172]
+                                    fprintf()
+                                elt_dup() <struct elt_s *elt_dup (struct elt_s *e) at svg.c:815> (R): [see 154]
+                                push() <void push (struct elt_s *e) at svg.c:928>: [see 119]
+                                elt_new() <struct elt_s *elt_new (void) at svg.c:766>: [see 114]
+                                svg_write() <void svg_write (char *buf, int len) at svg.c:4373> (recursive: see 110) [see 110]
+                                path_end() <void path_end (void) at svg.c:1462>:
+                                    setg() <void setg (int newg) at svg.c:1404> (R): [see 126]
+                                    fputs()
+                                    free()
+                                cond() <void cond (int type) at svg.c:999>:
+                                    fprintf()
+                                    pop_free_str() <char *pop_free_str (void) at svg.c:977>: [see 162]
+                                    strcmp()
+                                    free()
+                                    pop_free_val() <float pop_free_val (void) at svg.c:965>: [see 176]
+                                elt_free() <void elt_free (struct elt_s *e) at svg.c:789> (R): [see 121]
+                                sscanf()
+                                strdup()
+                                malloc()
+                                memcpy()
+                                gliss() <void gliss (int squiggle) at svg.c:1619> (R):
+                                    def_use() <void def_use (int def) at svg.c:1470> (R): [see 172]
+                                    pop_free_val() <float pop_free_val (void) at svg.c:965>: [see 176]
+                                    atan()
+                                    cos()
+                                    fprintf()
+                                stem() <void stem (char *op) at svg.c:1651> (R):
+                                    ps_exec() <void ps_exec (char *op) at svg.c:1842> (recursive: see 141) [see 141]
+                                    setg() <void setg (int newg) at svg.c:1404> (R): [see 126]
+                                    pop_free_val() <float pop_free_val (void) at svg.c:965>: [see 176]
+                                    ps_sym_lookup() <struct ps_sym_s *ps_sym_lookup (char *name) at svg.c:890>: [see 149]
+                                    fprintf()
+                                acciac() <void acciac (char *op) at svg.c:1568>:
+                                    setg() <void setg (int newg) at svg.c:1404> (R): [see 126]
+                                    pop_free_val() <float pop_free_val (void) at svg.c:965>: [see 176]
+                                    ps_sym_lookup() <struct ps_sym_s *ps_sym_lookup (char *name) at svg.c:890>: [see 149]
+                                    fprintf()
+                                fputs()
+                                xml_str_out() <void xml_str_out (char *p) at svg.c:1073>: [see 99]
+                                sin()
+                                strstr()
+                                sprintf()
+                                strw() <float strw (char *s) at svg.c:1338>: [see 186]
+                                setxory() <void setxory (char *s, float v) at svg.c:1536>: [see 222]
+                            pop() <struct elt_s *pop (int type) at svg.c:944>: [see 159]
+                            memcpy()
+                            free()
+                        strlen()
+                        free()
+                    user_ps_write() <void user_ps_write (void) at subs.c:1865>:
+                        fopen()
+                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                        fgets()
+                        fputs()
+                        fclose()
+                        fputc()
+                        svg_write() <void svg_write (char *buf, int len) at svg.c:4373> (R): [see 110]
+                        strlen()
+                    output() <int (*output) (FILE *out, const char *fmt, ...) at buffer.c:47>
+                    svg_output() <int svg_output (FILE *out, const char *fmt, ...) at svg.c:4630>:
+                        va_start()
+                        vsnprintf()
+                        va_end()
+                        svg_write() <void svg_write (char *buf, int len) at svg.c:4373> (R): [see 110]
+                        strlen()
+                    init_ps() <void init_ps (char *str) at buffer.c:127> (R):
+                        fprintf()
+                        marg_init() <void marg_init (void) at buffer.c:124>:
+                        open_fout() <void open_fout (void) at buffer.c:64> (recursive: see 66) [see 66]
+                        time()
+                        strftime()
+                        localtime()
+                        strchr()
+                        fputc()
+                        strlen()
+                        define_symbols() <void define_symbols (void) at syms.c:869>:
+                            fputs()
+                            strchr()
+                            strrchr()
+                            strlen()
+                            fprintf()
+                        output() <int (*output) (FILE *out, const char *fmt, ...) at buffer.c:47>
+                        user_ps_write() <void user_ps_write (void) at subs.c:1865>: [see 276]
+                        define_fonts() <void define_fonts (void) at format.c:262>:
+                            fputs()
+                            make_font_list() <void make_font_list (void) at format.c:302>:
+                            define_font() <void define_font (char name[], int num, int enc) at syms.c:856>:
+                                fprintf()
+                    fprintf()
+                    strdup()
+                    headfooter() <float headfooter (int header, float pwidth, float pheight) at buffer.c:418> (R):
+                        get_str_font() <void get_str_font (int *cft, int *dft) at subs.c:769>:
+                        memcpy()
+                        str_font() <void str_font (int ft) at subs.c:763>:
+                        output() <int (*output) (FILE *out, const char *fmt, ...) at buffer.c:47>
+                        strstr()
+                        tex_str() <float tex_str (char *s) at subs.c:145>:
+                            isdigit()
+                            strchr()
+                            cwid() <float cwid (unsigned char c) at subs.c:133>: [see 187]
+                            sscanf()
+                            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                            strncmp()
+                        strcpy()
+                        format_hf() <void format_hf (char *d, char *p) at buffer.c:327>:
+                            strchr()
+                            sprintf()
+                            time()
+                            cnv_date() <void cnv_date (time_t *ltime) at buffer.c:114>:
+                                tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                                strcpy()
+                                strftime()
+                                localtime()
+                            tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                        strchr()
+                        str_out() <void str_out (char *p, int action) at subs.c:914> (R):
+                            isdigit()
+                            is_latin() <int is_latin (unsigned char *p) at subs.c:738>
+                            str_pg_out() <void str_pg_out (char *p, int action) at subs.c:527> (R):
+                                atof()
+                                strchr()
+                                str_pg_out() <void str_pg_out (char *p, int action) at subs.c:527> (recursive: see 345) [see 345]
+                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R):
+                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                    fprintf()
+                                    exit()
+                                    write_buffer() <void write_buffer (void) at buffer.c:772> (recursive: see 80) [see 80]
+                                    va_start()
+                                    vsnprintf()
+                                    va_end()
+                                pango_attr_list_new()
+                                str_set_font() <void str_set_font (char *p) at subs.c:484>:
+                                    isdigit()
+                                    g_string_append_len()
+                                    str_font_change() <void str_font_change (int start, int end) at subs.c:458>:
+                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                        desc_font() <void desc_font (int fnum) at subs.c:340>:
+                                            strncmp()
+                                            strlen()
+                                            sprintf()
+                                            snprintf()
+                                            isupper()
+                                            tolower()
+                                            strstr()
+                                            memmove()
+                                            pango_font_description_from_string()
+                                        pango_attr_font_desc_new()
+                                        pango_attr_list_insert()
+                                        pango_attr_size_new()
+                                pango_layout_set_text()
+                                pango_layout_set_attributes()
+                                pango_layout_get_line_readonly()
+                                pango_layout_get_size()
+                                pg_line_output() <void pg_line_output (PangoLayoutLine *line) at subs.c:396> (R):
+                                    PANGO_FC_FONT()
+                                    pango_fc_font_lock_face()
+                                    pango_font_describe()
+                                    pango_font_description_get_size()
+                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                    FT_Load_Glyph()
+                                    FT_HAS_GLYPH_NAMES()
+                                    FT_Get_Postscript_Name()
+                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                    FT_Get_Glyph_Name()
+                                    pango_fc_font_unlock_face()
+                                g_string_truncate()
+                                pango_attr_list_unref()
+                            strchr()
+                            non_ascii_p() <int non_ascii_p (char *p) at subs.c:811>
+                            str_ft_out() <void str_ft_out (char *p, int end) at subs.c:836> (R):
+                                get_font_encoding() <int get_font_encoding (int ft) at format.c:1401>:
+                                non_ascii_p() <int non_ascii_p (char *p) at subs.c:811>
+                                str_end() <void str_end (int end) at subs.c:794> (R):
+                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                set_font() <void set_font (int ft) at format.c:1366> (R):
+                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                str_ft_out1() <void str_ft_out1 (char *p, int l) at subs.c:821> (R):
+                                    str_end() <void str_end (int end) at subs.c:794> (R): [see 399]
+                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                    set_font() <void set_font (int ft) at format.c:1366> (R): [see 402]
+                                glyph_out() <char *glyph_out (char *p) at glyph.c:171> (R):
+                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                isdigit()
+                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                        a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                        svg_write() <void svg_write (char *buf, int len) at svg.c:4373> (R): [see 110]
+                        strlen()
+                        fputs()
+                        set_str_font() <void set_str_font (int cft, int dft) at subs.c:776>:
+                close_page() <void close_page (void) at buffer.c:303>:
+                    svg_close() <void svg_close (void) at svg.c:4642>:
+                        setg() <void setg (int newg) at svg.c:1404> (R): [see 126]
+                        fputs()
+                        fprintf()
+                        elt_lst_dump() <void elt_lst_dump (struct elt_s *e) at svg.c:882>: [see 145]
+                        elt_free() <void elt_free (struct elt_s *e) at svg.c:789> (R): [see 121]
+                    close_fout() <void close_fout (void) at buffer.c:242>:
+                        ftell()
+                        printf()
+                        fclose()
+                    fprintf()
+                output() <int (*output) (FILE *out, const char *fmt, ...) at buffer.c:47>
+                svg_write() <void svg_write (char *buf, int len) at svg.c:4373> (R): [see 110]
+                fwrite()
+                strchr()
+                fopen()
+                error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                fprintf()
+                svg_output() <int svg_output (FILE *out, const char *fmt, ...) at svg.c:4630>: [see 286]
+                fgets()
+                strlen()
+                fclose()
+                memcpy()
+            close_page() <void close_page (void) at buffer.c:303>: [see 418]
+            fprintf()
+            close_fout() <void close_fout (void) at buffer.c:242>: [see 425]
+            fputs()
+        fopen()
+        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+        exit()
+    read_def_format() <void read_def_format (void) at abcm2ps.c:381> (R):
+        treat_file() <void treat_file (char *fn, char *ext) at abcm2ps.c:183> (R):
+            read_def_format() <void read_def_format (void) at abcm2ps.c:381> (recursive: see 449) [see 449]
+            strcmp()
+            read_file() <char *read_file (char *fn, char *ext) at abcm2ps.c:126>:
+                strcpy()
+                malloc()
+                fread()
+                realloc()
+                ferror()
+                free()
+                time()
+                open_file() <FILE *open_file (char *fn, char *ext, char *rfn) at abcm2ps.c:90>:
+                    strrchr()
+                    strncpy()
+                    strcpy()
+                    open_ext() <FILE *open_ext (char *fn, char *ext) at abcm2ps.c:71>:
+                        fopen()
+                        strrchr()
+                        strcat()
+                    strlen()
+                    sprintf()
+                fseek()
+                fclose()
+                ftell()
+                rewind()
+                fstat()
+                fileno()
+                memcpy()
+            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+            perror()
+            strdup()
+            fprintf()
+            strlen()
+            frontend() <void frontend (unsigned char *s, int ftype, char *fname, int linenum) at front.c:471> (R):
+                strncmp()
+                get_vers() <void get_vers (char *p) at front.c:385>:
+                    sscanf()
+                isdigit()
+                strchr()
+                isspace()
+                fprintf()
+                txt_add() <void txt_add (unsigned char *s, int sz) at front.c:92>:
+                    malloc()
+                    realloc()
+                    fprintf()
+                    exit()
+                    memcpy()
+                txt_add_eos() <void txt_add_eos (char *fname, int linenum) at front.c:371>:
+                    txt_add() <void txt_add (unsigned char *s, int sz) at front.c:92>: [see 491]
+                    abc_parse() <void abc_parse (char *p, char *fname, int ln) at abcparse.c:158>:
+                        parse_line() <int parse_line (char *p) at abcparse.c:1841>:
+                            abc_new() <struct SYMBOL *abc_new (int type, char *text) at abcparse.c:130>:
+                                getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                memset()
+                                strlen()
+                                strcpy()
+                            strncasecmp()
+                            isspace()
+                            strncmp()
+                            strcmp()
+                            syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>:
+                                strlen()
+                                print_error() <void print_error (char *s, int col) at abcparse.c:121>:
+                                    fprintf()
+                                fprintf()
+                            sscanf()
+                            get_user() <char *get_user (char *p, struct SYMBOL *s) at abcparse.c:1160>:
+                                isspace()
+                                get_deco() <char *get_deco (char *p, unsigned char *p_dc) at abcparse.c:356>:
+                                    syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                                    strlen()
+                                    strncmp()
+                                    getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                    memcpy()
+                                strcmp()
+                            parse_info() <int parse_info (char *p) at abcparse.c:2537>:
+                                abc_new() <struct SYMBOL *abc_new (int type, char *text) at abcparse.c:130>: [see 501]
+                                parse_decoline() <char *parse_decoline (char *p) at abcparse.c:1663>:
+                                    isspace()
+                                    syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                                    parse_gchord() <char *parse_gchord (char *p) at abcparse.c:1759>:
+                                        syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                                        strlen()
+                                        getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                        strcpy()
+                                        strncpy()
+                                    get_deco() <char *get_deco (char *p, unsigned char *p_dc) at abcparse.c:356>: [see 518]
+                                    strlen()
+                                    getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                    strcpy()
+                                parse_key() <void parse_key (char *p, struct SYMBOL *s) at abcparse.c:627>:
+                                    syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                                    strncmp()
+                                    isspace()
+                                    strncasecmp()
+                                    isalpha()
+                                    parse_acc() <char *parse_acc (char *p, struct SYMBOL *s) at abcparse.c:410>:
+                                        syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                                        parse_acc_pit() <char *parse_acc_pit (char *p, int *pit, int *acc) at abcparse.c:1533>:
+                                            isdigit()
+                                            strtol()
+                                            syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                                            strchr()
+                                        isspace()
+                                    parse_extra() <char *parse_extra (char *p, char **p_name, char **p_middle, char **p_stlines, char **p_scale, char **p_octave, char **p_cue, char **p_map) at abcparse.c:258>:
+                                        strncmp()
+                                        syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                                        atoi()
+                                        isdigit()
+                                        isspace()
+                                        getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                        strncpy()
+                                    parse_octave() <int parse_octave (char *p) at abcparse.c:609>:
+                                        syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                                    atof()
+                                    abc_new() <struct SYMBOL *abc_new (int type, char *text) at abcparse.c:130>: [see 501]
+                                    parse_clef() <void parse_clef (struct SYMBOL *s, char *name, char *middle) at abcparse.c:441>:
+                                        strncmp()
+                                        get_str() <char *get_str (char *d, char *s, int maxlen) at abcparse.c:1025>:
+                                            isspace()
+                                        getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                        strlen()
+                                        strcpy()
+                                        syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                                        isdigit()
+                                        parse_acc_pit() <char *parse_acc_pit (char *p, int *pit, int *acc) at abcparse.c:1533>: [see 548]
+                                    strcpy()
+                                    get_str() <char *get_str (char *d, char *s, int maxlen) at abcparse.c:1025>: [see 568]
+                                get_len() <char *get_len (char *p, struct SYMBOL *s) at abcparse.c:844>:
+                                    strcmp()
+                                    sscanf()
+                                parse_meter() <char *parse_meter (char *p, struct SYMBOL *s) at abcparse.c:884>:
+                                    strncmp()
+                                    sscanf()
+                                    isdigit()
+                                parse_tempo() <char *parse_tempo (char *p, struct SYMBOL *s) at abcparse.c:1066>:
+                                    get_str() <char *get_str (char *d, char *s, int maxlen) at abcparse.c:1025>: [see 568]
+                                    getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                    strlen()
+                                    strcpy()
+                                    syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                                    isspace()
+                                    isdigit()
+                                    strchr()
+                                    sscanf()
+                                    strncmp()
+                                get_user() <char *get_user (char *p, struct SYMBOL *s) at abcparse.c:1160>: [see 516]
+                                parse_voice() <char *parse_voice (char *p, struct SYMBOL *s) at abcparse.c:1219>:
+                                    isalnum()
+                                    strcmp()
+                                    syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                                    strncpy()
+                                    strcpy()
+                                    isspace()
+                                    parse_extra() <char *parse_extra (char *p, char **p_name, char **p_middle, char **p_stlines, char **p_scale, char **p_octave, char **p_cue, char **p_map) at abcparse.c:258>: [see 554]
+                                    strncmp()
+                                    get_str() <char *get_str (char *d, char *s, int maxlen) at abcparse.c:1025>: [see 568]
+                                    getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                    strlen()
+                                    atof()
+                                    parse_octave() <int parse_octave (char *p) at abcparse.c:609>: [see 562]
+                                    abc_new() <struct SYMBOL *abc_new (int type, char *text) at abcparse.c:130>: [see 501]
+                                    parse_clef() <void parse_clef (struct SYMBOL *s, char *name, char *middle) at abcparse.c:441>: [see 566]
+                                memset()
+                                lvlarena() <int lvlarena (int level) at abcm2ps.c:1057>:
+                                syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                            strlen()
+                            parse_gchord() <char *parse_gchord (char *p) at abcparse.c:1759>: [see 530]
+                            memcpy()
+                            check_nl() <int check_nl (char *p) at abcparse.c:239>
+                            parse_deco() <char *parse_deco (char *p, struct decos *deco, int m) at abcparse.c:1637>:
+                                get_deco() <char *get_deco (char *p, unsigned char *p_dc) at abcparse.c:356>: [see 518]
+                                syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                            parse_note() <char *parse_note (char *p, int flags) at abcparse.c:2309>:
+                                abc_new() <struct SYMBOL *abc_new (int type, char *text) at abcparse.c:130>: [see 501]
+                                isdigit()
+                                strtol()
+                                syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                                parse_len() <char *parse_len (char *p, int dur_u, int *p_len) at abcparse.c:1797>:
+                                    isdigit()
+                                    strtol()
+                                    syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                                parse_deco() <char *parse_deco (char *p, struct decos *deco, int m) at abcparse.c:1637>: [see 620]
+                                parse_acc_pit() <char *parse_acc_pit (char *p, int *pit, int *acc) at abcparse.c:1533>: [see 548]
+                                broken_rhythm() <void broken_rhythm (struct SYMBOL *s, int num) at abcparse.c:212>
+                                memcpy()
+                            isdigit()
+                            parse_bar() <char *parse_bar (char *p) at abcparse.c:1411>:
+                                abc_new() <struct SYMBOL *abc_new (int type, char *text) at abcparse.c:130>: [see 501]
+                                memcpy()
+                                isdigit()
+                                get_str() <char *get_str (char *d, char *s, int maxlen) at abcparse.c:1025>: [see 568]
+                                getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                strlen()
+                                strcpy()
+                            strtol()
+                            vover_new() <void vover_new (void) at abcparse.c:2655>:
+                                syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                        memcpy()
+                        do_tune() <void do_tune (void) at parse.c:3303>:
+                            lvlarena() <int lvlarena (int level) at abcm2ps.c:1057>: [see 614]
+                            getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                            memset()
+                            reset_deco() <void reset_deco (void) at deco.c:2599>:
+                                memset()
+                            system_new() <void system_new (void) at parse.c:634>:
+                                getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                memset()
+                                memcpy()
+                            close_page() <void close_page (void) at buffer.c:303>: [see 418]
+                            marg_init() <void marg_init (void) at buffer.c:124>: [see 294]
+                            get_info() <struct SYMBOL *get_info (struct SYMBOL *s) at parse.c:2790> (R):
+                                lvlarena() <int lvlarena (int level) at abcm2ps.c:1057>: [see 614]
+                                process_pscomment() <struct SYMBOL *process_pscomment (struct SYMBOL *s) at parse.c:4994> (R):
+                                    strlen()
+                                    strncmp()
+                                    get_str() <char *get_str (char *d, char *s, int maxlen) at abcparse.c:1025>: [see 568]
+                                    check_header() <int check_header (struct SYMBOL *s) at parse.c:2669>:
+                                        strncmp()
+                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                    strcmp()
+                                    ps_def() <void ps_def (struct SYMBOL *s, char *p, char use) at parse.c:4654> (R):
+                                        sym_link() <void sym_link (struct SYMBOL *s, int type) at parse.c:113>:
+                                        svg_ps() <void svg_ps (char *p) at parse.c:4637> (R):
+                                            strstr()
+                                            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                            parse_defs() <void parse_defs (char *p, char *q) at parse.c:4598> (R):
+                                                strstr()
+                                                strchr()
+                                                svg_def_id() <void svg_def_id (char *id, int idsz) at svg.c:1498>:
+                                                    strstr()
+                                                    strncmp()
+                                                    malloc()
+                                                    strlen()
+                                                    realloc()
+                                                    strncpy()
+                                                strncmp()
+                                                parse_path() <void parse_path (char *p, char *q, char *id, int idsz) at parse.c:4396> (R):
+                                                    strstr()
+                                                    strncmp()
+                                                    isspace()
+                                                    malloc()
+                                                    strncpy()
+                                                    strcpy()
+                                                    strlen()
+                                                    get_val() <char *get_val (char *p, float *v) at parse.c:4382>:
+                                                        isspace()
+                                                        isdigit()
+                                                        sscanf()
+                                                    sprintf()
+                                                    isdigit()
+                                                    bug() <void bug (char *msg, int fatal) at subs.c:71>:
+                                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                        fprintf()
+                                                        exit()
+                                                    getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                                    memset()
+                                                    ps_def() <void ps_def (struct SYMBOL *s, char *p, char use) at parse.c:4654> (recursive: see 671) [see 671]
+                                                    free()
+                                        a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                        user_ps_add() <void user_ps_add (char *s, char use) at subs.c:1839>:
+                                            strlen()
+                                            malloc()
+                                            sprintf()
+                                    gen_ly() <void gen_ly (int eob) at parse.c:1031>:
+                                        generate() <void generate (void) at parse.c:1001>:
+                                            system_init() <void system_init (void) at parse.c:677>:
+                                                voice_compress() <void voice_compress (void) at parse.c:444>:
+                                                    getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                                    memset()
+                                                    memcpy()
+                                                    sym_add() <struct SYMBOL *sym_add (struct VOICE_S *p_voice, int type) at parse.c:137>:
+                                                        getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                                        memset()
+                                                        sym_link() <void sym_link (struct SYMBOL *s, int type) at parse.c:113>: [see 672]
+                                                voice_dup() <void voice_dup (void) at parse.c:573>:
+                                                    getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                                    memcpy()
+                                                sort_all() <void sort_all (void) at parse.c:207>:
+                                                    memset()
+                                                    mrest_expand() <void mrest_expand (struct SYMBOL *s) at parse.c:160>:
+                                                        memcpy()
+                                                        memset()
+                                                        sym_add() <struct SYMBOL *sym_add (struct VOICE_S *p_voice, int type) at parse.c:137>: [see 721]
+                                                    sym_add() <struct SYMBOL *sym_add (struct VOICE_S *p_voice, int type) at parse.c:137>: [see 721]
+                                            set_bar_num() <void set_bar_num (void) at parse.c:818>:
+                                                do_clip() <void do_clip (void) at parse.c:742>:
+                                                    go_global_time() <struct SYMBOL *go_global_time (struct SYMBOL *s, struct symsel_s *symsel) at parse.c:687>:
+                                                    memcpy()
+                                                go_global_time() <struct SYMBOL *go_global_time (struct SYMBOL *s, struct symsel_s *symsel) at parse.c:687>: [see 737]
+                                            lvlarena() <int lvlarena (int level) at abcm2ps.c:1057>: [see 614]
+                                            output_music() <void output_music (void) at music.c:5080>:
+                                                gen_init() <void gen_init (void) at music.c:5010>:
+                                                    output_ps() <void output_ps (struct SYMBOL *s, int color) at draw.c:4429>:
+                                                        a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                    unlksym() <void unlksym (struct SYMBOL *s) at music.c:319>:
+                                                check_buffer() <void check_buffer (void) at buffer.c:983>:
+                                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                    write_buffer() <void write_buffer (void) at buffer.c:772> (R): [see 80]
+                                                set_global() <void set_global (void) at music.c:3513>:
+                                                    set_words() <void set_words (struct VOICE_S *p_voice) at music.c:3394>:
+                                                    set_rb() <void set_rb (struct VOICE_S *p_voice) at music.c:3473>:
+                                                    set_float() <void set_float (void) at music.c:657>:
+                                                    set_clefs() <void set_clefs (void) at music.c:2497>:
+                                                        lvlarena() <int lvlarena (int level) at abcm2ps.c:1057>: [see 614]
+                                                        memset()
+                                                        set_auto_clef() <int set_auto_clef (int staff, struct SYMBOL *s_start, int clef_type_start) at music.c:2333>:
+                                                            unlksym() <void unlksym (struct SYMBOL *s) at music.c:319>: [see 745]
+                                                            insert_clef() <struct SYMBOL *insert_clef (struct SYMBOL *s, int clef_type, int clef_line) at music.c:607>:
+                                                                sym_add() <struct SYMBOL *sym_add (struct VOICE_S *p_voice, int type) at parse.c:137>: [see 721]
+                                                        strlen()
+                                                        set_repeat() <void set_repeat (struct SYMBOL *g, struct SYMBOL *s) at music.c:1622>:
+                                                            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                            unlksym() <void unlksym (struct SYMBOL *s) at music.c:319>: [see 745]
+                                                            to_rest() <void to_rest (struct SYMBOL *s) at music.c:1607>:
+                                                            set_width() <void set_width (struct SYMBOL *s) at music.c:1016>:
+                                                                AT_LEAST()
+                                                                deco_width() <float deco_width (struct SYMBOL *s) at deco.c:1294>:
+                                                                gchord_width() <float gchord_width (struct SYMBOL *s, float wlnote, float wlw) at music.c:820>:
+                                                                    AT_LEAST()
+                                                                ly_width() <float ly_width (struct SYMBOL *s, float wlw) at music.c:893>:
+                                                                    cwid() <float cwid (unsigned char c) at subs.c:133>: [see 187]
+                                                                    isdigit()
+                                                                    strlen()
+                                                                    AT_LEAST()
+                                                                strlen()
+                                                                set_graceoffs() <float set_graceoffs (struct SYMBOL *s) at music.c:750>:
+                                                                    set_head_shift() <void set_head_shift (struct SYMBOL *s) at music.c:112>:
+                                                                        set_heads() <float set_heads (struct SYMBOL *s) at music.c:54>:
+                                                                            strchr()
+                                                                            strlen()
+                                                                            sscanf()
+                                                                    acc_shift() <void acc_shift (struct note *notes[], int n, float dx_head) at music.c:186>:
+                                                                bug() <void bug (char *msg, int fatal) at subs.c:71>: [see 701]
+                                                            set_space() <float set_space (struct SYMBOL *s) at music.c:1308>:
+                                                            getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                                            memcpy()
+                                                        getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                                        memcpy()
+                                                        insert_clef() <struct SYMBOL *insert_clef (struct SYMBOL *s, int clef_type, int clef_line) at music.c:607>: [see 758]
+                                                        unlksym() <void unlksym (struct SYMBOL *s) at music.c:319>: [see 745]
+                                                    set_pitch() <void set_pitch (struct SYMBOL *last_s) at music.c:2726>:
+                                                        set_yval() <void set_yval (struct SYMBOL *s) at music.c:2258>:
+                                                combine_voices() <void combine_voices (void) at music.c:516>:
+                                                    may_combine() <int may_combine (struct SYMBOL *s) at music.c:379>:
+                                                    do_combine() <void do_combine (struct SYMBOL *s) at music.c:426>:
+                                                        memcpy()
+                                                        sort_pitch() <void sort_pitch (struct SYMBOL *s) at parse.c:4120>:
+                                                            memcpy()
+                                                        memmove()
+                                                        unlksym() <void unlksym (struct SYMBOL *s) at music.c:319>: [see 745]
+                                                        may_combine() <int may_combine (struct SYMBOL *s) at music.c:379>: [see 794]
+                                                set_stem_dir() <void set_stem_dir (void) at music.c:2821>:
+                                                    bug() <void bug (char *msg, int fatal) at subs.c:71>: [see 701]
+                                                    memmove()
+                                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                set_beams() <void set_beams (struct SYMBOL *sym) at music.c:3652>:
+                                                set_stems() <void set_stems (void) at music.c:4335>:
+                                                    set_head_shift() <void set_head_shift (struct SYMBOL *s) at music.c:112>: [see 777]
+                                                set_rest_offset() <void set_rest_offset (void) at music.c:3013>:
+                                                    memset()
+                                                set_overlap() <void set_overlap (void) at music.c:4061>:
+                                                    same_head() <int same_head (struct SYMBOL *s1, struct SYMBOL *s2) at music.c:3769> (R):
+                                                        same_head() <int same_head (struct SYMBOL *s1, struct SYMBOL *s2) at music.c:3769> (recursive: see 812) [see 812]
+                                                    set_right() <void set_right (struct SYMBOL *s, float *right) at music.c:3986>:
+                                                    set_left() <void set_left (struct SYMBOL *s, float *left) at music.c:3937>:
+                                                    unison_acc() <void unison_acc (struct SYMBOL *s1, struct SYMBOL *s2, int i1, int i2) at music.c:3902>:
+                                                set_acc_shft() <void set_acc_shft (void) at music.c:256>:
+                                                    set_heads() <float set_heads (struct SYMBOL *s) at music.c:54>: [see 778]
+                                                    acc_shift() <void acc_shift (struct note *notes[], int n, float dx_head) at music.c:186>: [see 782]
+                                                set_allsymwidth() <void set_allsymwidth (struct SYMBOL *last_s) at music.c:1424>:
+                                                    memset()
+                                                    set_width() <void set_width (struct SYMBOL *s) at music.c:1016>: [see 765]
+                                                    set_space() <float set_space (struct SYMBOL *s) at music.c:1308>: [see 784]
+                                                error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                set_indent() <float set_indent (void) at music.c:3598>:
+                                                    str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                                    strstr()
+                                                    tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                                                    cwid() <float cwid (unsigned char c) at subs.c:133>: [see 187]
+                                                cut_tune() <void cut_tune (float lwidth, float indent) at music.c:2170>:
+                                                    set_lines() <struct SYMBOL *set_lines (struct SYMBOL *first, struct SYMBOL *last, float lwidth, float indent) at music.c:2054>:
+                                                        set_nl() <struct SYMBOL *set_nl (struct SYMBOL *s) at music.c:1881>:
+                                                            unlksym() <void unlksym (struct SYMBOL *s) at music.c:319>: [see 745]
+                                                            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                            custos_add() <void custos_add (struct SYMBOL *s) at music.c:1835>:
+                                                                sym_add() <struct SYMBOL *sym_add (struct VOICE_S *p_voice, int type) at parse.c:137>: [see 721]
+                                                            sym_add() <struct SYMBOL *sym_add (struct VOICE_S *p_voice, int type) at parse.c:137>: [see 721]
+                                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                    set_nl() <struct SYMBOL *set_nl (struct SYMBOL *s) at music.c:1881>: [see 832]
+                                                set_piece() <void set_piece (void) at music.c:4631>:
+                                                    memset()
+                                                    set_brace() <void set_brace (struct SYSTEM *sy, char *empty, char *empty_gl) at music.c:4604>:
+                                                    strlen()
+                                                    sym_staff_move() <void sym_staff_move (int staff) at music.c:4582>:
+                                                    init_music_line() <void init_music_line (void) at music.c:3193>:
+                                                        getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                                        memset()
+                                                        memcpy()
+                                                        sym_new() <struct SYMBOL *sym_new (int type, struct VOICE_S *p_voice, struct SYMBOL *last_s) at music.c:3155>:
+                                                            getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                                            memset()
+                                                        set_pitch() <void set_pitch (struct SYMBOL *last_s) at music.c:2726>: [see 791]
+                                                        set_allsymwidth() <void set_allsymwidth (struct SYMBOL *last_s) at music.c:1424>: [see 820]
+                                                    check_bar() <void check_bar (struct SYMBOL *s) at music.c:4494>:
+                                                        unlksym() <void unlksym (struct SYMBOL *s) at music.c:319>: [see 745]
+                                                set_sym_glue() <void set_sym_glue (float width) at music.c:4780>:
+                                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                delayed_output() <float delayed_output (float indent) at music.c:5054>:
+                                                    malloc()
+                                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                    exit()
+                                                    draw_sym_near() <void draw_sym_near (void) at draw.c:3891>:
+                                                        calculate_beam() <int calculate_beam (struct BEAM *bm, struct SYMBOL *s1) at draw.c:118>:
+                                                            sym_dup() <struct SYMBOL *sym_dup (struct SYMBOL *s_orig) at draw.c:98>:
+                                                                getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                                                memcpy()
+                                                                memset()
+                                                            bug() <void bug (char *msg, int fatal) at subs.c:71>: [see 701]
+                                                            b_pos() <float b_pos (int grace, int stem, int flags, float b) at draw.c:72>:
+                                                                rnd6() <float rnd6 (float y) at draw.c:64>
+                                                        set_tie_room() <void set_tie_room (void) at draw.c:4815>:
+                                                            set_tie_dir() <void set_tie_dir (struct SYMBOL *sym) at draw.c:4696>:
+                                                            y_set() <void y_set (int staff, int up, float x, float w, float y) at deco.c:243>:
+                                                        draw_deco_near() <void draw_deco_near (void) at deco.c:1682>:
+                                                            deco_create() <void deco_create (struct SYMBOL *s, struct decos *dc) at deco.c:1499>:
+                                                                getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                                                memset()
+                                                            ll_deco() <void ll_deco (void) at deco.c:1572>:
+                                                                strlen()
+                                                                getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                                                strcpy()
+                                                                get_deco() <int get_deco (char *name) at deco.c:819>:
+                                                                    strcmp()
+                                                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                                memset()
+                                                                d_gliss() <void d_gliss (struct deco_elt *de2) at deco.c:428>:
+                                                                prev_scut() <struct SYMBOL *prev_scut (struct SYMBOL *s) at draw.c:1756>:
+                                                        y_set() <void y_set (int staff, int up, float x, float w, float y) at deco.c:243>: [see 875]
+                                                        draw_measnb() <void draw_measnb (void) at deco.c:2171>:
+                                                            set_sscale() <void set_sscale (int staff) at draw.c:4669>:
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            set_font() <void set_font (int ft) at format.c:1366> (R): [see 402]
+                                                            y_get() <float y_get (int staff, int up, float x, float w) at deco.c:203>:
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            puty() <void puty (float y) at draw.c:4634>:
+                                                                putf() <void putf (float v) at draw.c:4630>:
+                                                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            y_set() <void y_set (int staff, int up, float x, float w, float y) at deco.c:243>: [see 875]
+                                                            cwid() <float cwid (unsigned char c) at subs.c:133>: [see 187]
+                                                            putxy() <void putxy (float x, float y) at draw.c:4639>:
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                        draw_deco_note() <void draw_deco_note (void) at deco.c:1727>:
+                                                        set_color() <void set_color (int new_color) at draw.c:42>:
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                        set_sscale() <void set_sscale (int staff) at draw.c:4669>: [see 892]
+                                                        draw_tuplet() <struct SYMBOL *draw_tuplet (struct SYMBOL *t, struct SYMBOL *s) at draw.c:2413> (R):
+                                                            draw_tuplet() <struct SYMBOL *draw_tuplet (struct SYMBOL *t, struct SYMBOL *s) at draw.c:2413> (recursive: see 908) [see 908]
+                                                            draw_slur() <int draw_slur (struct SYMBOL *k1_orig, struct SYMBOL *k2, int m1, int m2, int slur_type) at draw.c:1892>:
+                                                                slur_multi() <int slur_multi (struct SYMBOL *k1, struct SYMBOL *k2) at draw.c:1877>
+                                                                slur_direction() <int slur_direction (struct SYMBOL *k1, struct SYMBOL *k2) at draw.c:1778>:
+                                                                error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                                slur_out() <void slur_out (float x1, float y1, float x2, float y2, int s, float height, int dotted, int staff) at draw.c:1805>:
+                                                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                                    putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                                y_set() <void y_set (int staff, int up, float x, float w, float y) at deco.c:243>: [see 875]
+                                                            y_get() <float y_get (int staff, int up, float x, float w) at deco.c:203>: [see 895]
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                            y_set() <void y_set (int staff, int up, float x, float w, float y) at deco.c:243>: [see 875]
+                                                            draw_slurs() <void draw_slurs (struct SYMBOL *first, struct SYMBOL *last) at draw.c:2238> (R):
+                                                                draw_slurs() <void draw_slurs (struct SYMBOL *first, struct SYMBOL *last) at draw.c:2238> (recursive: see 922) [see 922]
+                                                                next_scut() <struct SYMBOL *next_scut (struct SYMBOL *s) at draw.c:1740>:
+                                                                draw_slur() <int draw_slur (struct SYMBOL *k1_orig, struct SYMBOL *k2, int m1, int m2, int slur_type) at draw.c:1892>: [see 910]
+                                                            fprintf()
+                                                        draw_all_slurs() <void draw_all_slurs (struct VOICE_S *p_voice) at draw.c:3262>:
+                                                            draw_slurs() <void draw_slurs (struct SYMBOL *first, struct SYMBOL *last) at draw.c:2238> (R): [see 922]
+                                                            prev_scut() <struct SYMBOL *prev_scut (struct SYMBOL *s) at draw.c:1756>: [see 889]
+                                                            draw_slur() <int draw_slur (struct SYMBOL *k1_orig, struct SYMBOL *k2, int m1, int m2, int slur_type) at draw.c:1892>: [see 910]
+                                                            next_scut() <struct SYMBOL *next_scut (struct SYMBOL *s) at draw.c:1740>: [see 924]
+                                                        draw_deco_staff() <void draw_deco_staff (void) at deco.c:1870>:
+                                                            memset()
+                                                            y_get() <float y_get (int staff, int up, float x, float w) at deco.c:203>: [see 895]
+                                                            set_sscale() <void set_sscale (int staff) at draw.c:4669>: [see 892]
+                                                            draw_gchord() <void draw_gchord (struct SYMBOL *s, float gchy_min, float gchy_max) at deco.c:2007>:
+                                                                y_get() <float y_get (int staff, int up, float x, float w) at deco.c:203>: [see 895]
+                                                                str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                                                set_font() <void set_font (int ft) at format.c:1366> (R): [see 402]
+                                                                set_sscale() <void set_sscale (int staff) at draw.c:4669>: [see 892]
+                                                                tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                                                                strchr()
+                                                                y_set() <void y_set (int staff, int up, float x, float w, float y) at deco.c:243>: [see 875]
+                                                                putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                                str_out() <void str_out (char *p, int action) at subs.c:914> (R): [see 342]
+                                                            draw_repbra() <void draw_repbra (struct VOICE_S *p_voice) at deco.c:1747>:
+                                                                y_get() <float y_get (int staff, int up, float x, float w) at deco.c:203>: [see 895]
+                                                                set_sscale() <void set_sscale (int staff) at draw.c:4669>: [see 892]
+                                                                set_font() <void set_font (int ft) at format.c:1366> (R): [see 402]
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                                putx() <void putx (float x) at draw.c:4632>:
+                                                                    putf() <void putf (float v) at draw.c:4630>: [see 898]
+                                                                putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                                y_set() <void y_set (int staff, int up, float x, float w, float y) at deco.c:243>: [see 875]
+                                                            y_set() <void y_set (int staff, int up, float x, float w, float y) at deco.c:243>: [see 875]
+                                                        draw_all_lyrics() <void draw_all_lyrics (void) at draw.c:3695>:
+                                                            memset()
+                                                            y_get() <float y_get (int staff, int up, float x, float w) at deco.c:203>: [see 895]
+                                                            draw_lyrics() <float draw_lyrics (struct VOICE_S *p_voice, int nly, float *h, float y, int incr) at draw.c:3647>:
+                                                                str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                                draw_lyric_line() <void draw_lyric_line (struct VOICE_S *p_voice, int j) at draw.c:3514>:
+                                                                    putx() <void putx (float x) at draw.c:4632>: [see 952]
+                                                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                                    get_str_font() <void get_str_font (int *cft, int *dft) at subs.c:769>: [see 318]
+                                                                    set_str_font() <void set_str_font (int cft, int dft) at subs.c:776>: [see 417]
+                                                                    str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                                                    strlen()
+                                                                    put_str() <void put_str (char *str, int action) at subs.c:981>:
+                                                                        tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                                                                        str_out() <void str_out (char *p, int action) at subs.c:914> (R): [see 342]
+                                                                        a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            draw_tblt_w() <void draw_tblt_w (struct VOICE_S *p_voice, int nly, float y, struct tblt_s *tblt) at draw.c:3396>:
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                                set_font() <void set_font (int ft) at format.c:1366> (R): [see 402]
+                                                                bar_cnv() <int bar_cnv (int bar_type) at draw.c:1081>:
+                                                                tbl_out() <void tbl_out (char *s, float x, int j, char *f) at draw.c:3375>:
+                                                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            draw_tblt_p() <void draw_tblt_p (struct VOICE_S *p_voice, float y, struct tblt_s *tblt) at draw.c:3433>:
+                                                                setmap() <void setmap (int sf, unsigned char *map) at draw.c:3333>:
+                                                                memcpy()
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            y_set() <void y_set (int staff, int up, float x, float w, float y) at deco.c:243>: [see 875]
+                                                    draw_systems() <float draw_systems (float indent) at draw.c:4299>:
+                                                        set_staff() <float set_staff (void) at draw.c:4119>:
+                                                            memset()
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            draw_partempo() <float draw_partempo (int staff, float top) at deco.c:2442>:
+                                                                str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                                                tempo_width() <float tempo_width (struct SYMBOL *s) at deco.c:2380>:
+                                                                    tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                                                                    cwid() <float cwid (unsigned char c) at subs.c:133>: [see 187]
+                                                                y_get() <float y_get (int staff, int up, float x, float w) at deco.c:203>: [see 895]
+                                                                get_beat() <int get_beat (struct meter_s *m) at deco.c:2308>:
+                                                                    sscanf()
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                                write_tempo() <void write_tempo (struct SYMBOL *s, int beat, float sc) at deco.c:2407>:
+                                                                    put_str() <void put_str (char *str, int action) at subs.c:981>: [see 970]
+                                                                    draw_notempo() <void draw_notempo (struct SYMBOL *s, int len, float sc) at deco.c:2327>:
+                                                                        a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                                        identify_note() <void identify_note (struct SYMBOL *s, int dur, int *p_head, int *p_dots, int *p_flags) at parse.c:3056>:
+                                                                            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                                    snprintf()
+                                                                tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                                                                set_font() <void set_font (int ft) at format.c:1366> (R): [see 402]
+                                                                str_out() <void str_out (char *p, int action) at subs.c:914> (R): [see 342]
+                                                        draw_vname() <void draw_vname (float indent) at draw.c:4033>:
+                                                            memset()
+                                                            strstr()
+                                                            str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            put_str() <void put_str (char *str, int action) at subs.c:981>: [see 970]
+                                                        bar_set() <void bar_set (float *bar_bot, float *bar_height, float *xstaff) at draw.c:4272>:
+                                                        draw_lstaff() <void draw_lstaff (float x) at draw.c:740>:
+                                                            set_sscale() <void set_sscale (int staff) at draw.c:4669>: [see 892]
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            draw_sysbra() <void draw_sysbra (float x, int staff, int flag) at draw.c:714>:
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                        draw_staff() <void draw_staff (int staff, float x1, float x2) at draw.c:783>:
+                                                            set_sscale() <void set_sscale (int staff) at draw.c:4669>: [see 892]
+                                                            strlen()
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            putx() <void putx (float x) at draw.c:4632>: [see 952]
+                                                            putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                        draw_bar() <void draw_bar (struct SYMBOL *s, float bot, float h) at draw.c:1117>:
+                                                            set_scale() <void set_scale (struct SYMBOL *s) at draw.c:4647>:
+                                                                set_sscale() <void set_sscale (int staff) at draw.c:4669>: [see 892]
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            set_font() <void set_font (int ft) at format.c:1366> (R): [see 402]
+                                                            bar_cnv() <int bar_cnv (int bar_type) at draw.c:1081>: [see 977]
+                                                            set_sscale() <void set_sscale (int staff) at draw.c:4669>: [see 892]
+                                                        anno_out() <void anno_out (struct SYMBOL *s, char type) at draw.c:51>:
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                        set_sscale() <void set_sscale (int staff) at draw.c:4669>: [see 892]
+                                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                    free()
+                                                draw_all_symb() <void draw_all_symb (void) at draw.c:4609>:
+                                                    draw_symbols() <void draw_symbols (struct VOICE_S *p_voice) at draw.c:4455>:
+                                                        output_ps() <void output_ps (struct SYMBOL *s, int color) at draw.c:4429>: [see 743]
+                                                        memcpy()
+                                                        set_color() <void set_color (int new_color) at draw.c:42>: [see 905]
+                                                        set_scale() <void set_scale (struct SYMBOL *s) at draw.c:4647>: [see 1027]
+                                                        calculate_beam() <int calculate_beam (struct BEAM *bm, struct SYMBOL *s1) at draw.c:118>: [see 865]
+                                                        anno_out() <void anno_out (struct SYMBOL *s, char type) at draw.c:51>: [see 1035]
+                                                        draw_beams() <void draw_beams (struct BEAM *bm) at draw.c:566>:
+                                                            draw_beam() <void draw_beam (float x1, float x2, float dy, float h, struct BEAM *bm, int n) at draw.c:536>:
+                                                                putf() <void putf (float v) at draw.c:4630>: [see 898]
+                                                                putx() <void putx (float x) at draw.c:4632>: [see 952]
+                                                                putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            unlksym() <void unlksym (struct SYMBOL *s) at music.c:319>: [see 745]
+                                                        draw_note() <void draw_note (float x, struct SYMBOL *s, int fl) at draw.c:1623>:
+                                                            setdoty() <void setdoty (struct SYMBOL *s, signed char *y_tb) at draw.c:1451>
+                                                            draw_hl() <void draw_hl (float x, float staffb, int up, int y, char *stafflines, char *hltype) at draw.c:923>:
+                                                                strlen()
+                                                                putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            set_defl() <void set_defl (int new_defl) at deco.c:2613>:
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            draw_basic_note() <void draw_basic_note (float x, struct SYMBOL *s, int m, signed char *y_tb) at draw.c:1489>:
+                                                                putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                                identify_note() <void identify_note (struct SYMBOL *s, int dur, int *p_head, int *p_dots, int *p_flags) at parse.c:3056>: [see 1002]
+                                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                                snprintf()
+                                                                sprintf()
+                                                                set_color() <void set_color (int new_color) at draw.c:42>: [see 905]
+                                                                putx() <void putx (float x) at draw.c:4632>: [see 952]
+                                                                draw_acc() <void draw_acc (int acc, int microscale) at draw.c:902>:
+                                                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                        draw_rest() <void draw_rest (struct SYMBOL *s) at draw.c:1197>:
+                                                            deco_update() <void deco_update (struct SYMBOL *s, float dx) at deco.c:1278>:
+                                                            putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            set_font() <void set_font (int ft) at format.c:1366> (R): [see 402]
+                                                            strlen()
+                                                        set_sscale() <void set_sscale (int staff) at draw.c:4669>: [see 892]
+                                                        putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                        a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                        draw_timesig() <void draw_timesig (float x, struct SYMBOL *s) at draw.c:827>:
+                                                            strlen()
+                                                            sprintf()
+                                                            putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                        draw_keysig() <void draw_keysig (struct VOICE_S *p_voice, float x, struct SYMBOL *s) at draw.c:952>:
+                                                            putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                            draw_hl() <void draw_hl (float x, float staffb, int up, int y, char *stafflines, char *hltype) at draw.c:923>: [see 1058]
+                                                            draw_acc() <void draw_acc (int acc, int microscale) at draw.c:902>: [see 1072]
+                                                        draw_gracenotes() <void draw_gracenotes (struct SYMBOL *s) at draw.c:1305>:
+                                                            anno_out() <void anno_out (struct SYMBOL *s, char type) at draw.c:51>: [see 1035]
+                                                            calculate_beam() <int calculate_beam (struct BEAM *bm, struct SYMBOL *s1) at draw.c:118>: [see 865]
+                                                            draw_beams() <void draw_beams (struct BEAM *bm) at draw.c:566>: [see 1049]
+                                                            draw_note() <void draw_note (float x, struct SYMBOL *s, int fl) at draw.c:1623>: [see 1056]
+                                                            putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                            a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                        bug() <void bug (char *msg, int fatal) at subs.c:71>: [see 701]
+                                                        draw_all_ties() <void draw_all_ties (struct VOICE_S *p_voice) at draw.c:3089>:
+                                                            draw_ties() <void draw_ties (struct SYMBOL *k1, struct SYMBOL *k2, int job) at draw.c:2963>:
+                                                                draw_note_ties() <void draw_note_ties (struct SYMBOL *k1, struct SYMBOL *k2, int ntie, unsigned char *mhead1, unsigned char *mhead2, int job) at draw.c:2836>:
+                                                                    slur_out() <void slur_out (float x1, float y1, float x2, float y2, int s, float height, int dotted, int staff) at draw.c:1805>: [see 914]
+                                                                error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                            memcpy()
+                                                            draw_ties_g() <void draw_ties_g (struct SYMBOL *s1, struct SYMBOL *s2, int job) at draw.c:3054>:
+                                                                draw_ties() <void draw_ties (struct SYMBOL *k1, struct SYMBOL *k2, int job) at draw.c:2963>: [see 1104]
+                                                            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                            tie_comb() <struct SYMBOL *tie_comb (struct SYMBOL *s) at draw.c:3068>:
+                                                draw_all_deco() <void draw_all_deco (void) at deco.c:1327>:
+                                                    strchr()
+                                                    strlen()
+                                                    set_sscale() <void set_sscale (int staff) at draw.c:4669>: [see 892]
+                                                    set_scale() <void set_scale (struct SYMBOL *s) at draw.c:4647>: [see 1027]
+                                                    y_get() <float y_get (int staff, int up, float x, float w) at deco.c:203>: [see 895]
+                                                    y_set() <void y_set (int staff, int up, float x, float w, float y) at deco.c:243>: [see 875]
+                                                    set_defl() <void set_defl (int new_defl) at deco.c:2613>: [see 1062]
+                                                    putx() <void putx (float x) at draw.c:4632>: [see 952]
+                                                    putf() <void putf (float v) at draw.c:4630>: [see 898]
+                                                    sscanf()
+                                                    str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                                    putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                    put_str() <void put_str (char *str, int action) at subs.c:981>: [see 970]
+                                                    set_color() <void set_color (int new_color) at draw.c:42>: [see 905]
+                                                error_show() <void error_show (void) at music.c:5041>:
+                                                    putxy() <void putxy (float x, float y) at draw.c:4639>: [see 902]
+                                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                bskip() <void bskip (float h) at buffer.c:747>:
+                                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                buffer_eob() <void buffer_eob (int eot) at buffer.c:930>:
+                                                    block_put() <void block_put (void) at buffer.c:891>:
+                                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                        write_buffer() <void write_buffer (void) at buffer.c:772> (R): [see 80]
+                                                        strcpy()
+                                                    write_eps() <void write_eps (void) at buffer.c:664>:
+                                                        strcpy()
+                                                        cutext() <void cutext (char *fid) at buffer.c:54>: [see 73]
+                                                        strlen()
+                                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                        exit()
+                                                        isspace()
+                                                        strncpy()
+                                                        epsf_fn_adj() <void epsf_fn_adj (char *p) at buffer.c:626>:
+                                                        sprintf()
+                                                        strcat()
+                                                        fopen()
+                                                        epsf_title() <void epsf_title (char *p, int sz) at buffer.c:639>:
+                                                            snprintf()
+                                                        init_ps() <void init_ps (char *str) at buffer.c:127> (R): [see 292]
+                                                        fprintf()
+                                                        write_buffer() <void write_buffer (void) at buffer.c:772> (R): [see 80]
+                                                        fputs()
+                                                        init_svg() <void init_svg (char *str) at buffer.c:228>:
+                                                            output() <int (*output) (FILE *out, const char *fmt, ...) at buffer.c:47>
+                                                            svg_output() <int svg_output (FILE *out, const char *fmt, ...) at svg.c:4630>: [see 286]
+                                                            fprintf()
+                                                            define_svg_symbols() <void define_svg_symbols (char *title, int num, float w, float h) at svg.c:1183>: [see 83]
+                                                            user_ps_write() <void user_ps_write (void) at subs.c:1865>: [see 276]
+                                                        svg_close() <void svg_close (void) at svg.c:4642>: [see 419]
+                                                        close_fout() <void close_fout (void) at buffer.c:242>: [see 425]
+                                                    init_page() <void init_page (void) at buffer.c:536> (R): [see 81]
+                                                    close_page() <void close_page (void) at buffer.c:303>: [see 418]
+                                                    write_buffer() <void write_buffer (void) at buffer.c:772> (R): [see 80]
+                                                new_music_line() <void new_music_line (void) at music.c:4987>:
+                                            clrarena() <void clrarena (int level) at abcm2ps.c:1043>: [see 24]
+                                        put_words() <void put_words (struct SYMBOL *words) at subs.c:1278>:
+                                            buffer_eob() <void buffer_eob (int eot) at buffer.c:930>: [see 1134]
+                                            str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                            cwid() <float cwid (unsigned char c) at subs.c:133>: [see 187]
+                                            strlen()
+                                            isspace()
+                                            bskip() <void bskip (float h) at buffer.c:747>: [see 1132]
+                                            put_wline() <int put_wline (char *p, float x, int right) at subs.c:1230>:
+                                                isspace()
+                                                isdigit()
+                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                put_str() <void put_str (char *str, int action) at subs.c:981>: [see 970]
+                                        buffer_eob() <void buffer_eob (int eot) at buffer.c:930>: [see 1134]
+                                    get_textopt() <int get_textopt (char *p) at format.c:634>:
+                                        strncmp()
+                                    write_text() <void write_text (char *cmd, char *s, int job) at subs.c:1034>:
+                                        str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                        bskip() <void bskip (float h) at buffer.c:747>: [see 1132]
+                                        buffer_eob() <void buffer_eob (int eot) at buffer.c:930>: [see 1134]
+                                        a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                        put_str() <void put_str (char *str, int action) at subs.c:981>: [see 970]
+                                        is_latin() <int is_latin (unsigned char *p) at subs.c:738>
+                                        pg_write_text() <void pg_write_text (char *s, int job, float parskip) at subs.c:703>:
+                                            pango_layout_set_width()
+                                            pango_layout_set_justify()
+                                            pango_attr_list_new()
+                                            tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                                            str_set_font() <void str_set_font (char *p) at subs.c:484>: [see 358]
+                                            pg_para_output() <void pg_para_output (int job) at subs.c:583>:
+                                                pango_layout_set_text()
+                                                pango_layout_set_attributes()
+                                                pango_layout_get_lines_readonly()
+                                                pango_layout_line_get_extents()
+                                                PANGO_FC_FONT()
+                                                pango_fc_font_lock_face()
+                                                pango_font_describe()
+                                                pango_font_description_get_size()
+                                                pango_layout_index_to_pos()
+                                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                                error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                FT_Load_Glyph()
+                                                fprintf()
+                                                FT_HAS_GLYPH_NAMES()
+                                                FT_Get_Postscript_Name()
+                                                FT_Get_Glyph_Name()
+                                                strcmp()
+                                                pango_fc_font_unlock_face()
+                                                bskip() <void bskip (float h) at buffer.c:747>: [see 1132]
+                                                g_string_truncate()
+                                            bskip() <void bskip (float h) at buffer.c:747>: [see 1132]
+                                            buffer_eob() <void buffer_eob (int eot) at buffer.c:930>: [see 1134]
+                                            pango_attr_list_unref()
+                                        str_end() <void str_end (int end) at subs.c:794> (R): [see 399]
+                                        isspace()
+                                        tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                                        str_ft_out1() <void str_ft_out1 (char *p, int l) at subs.c:821> (R): [see 405]
+                                        cwid() <float cwid (unsigned char c) at subs.c:133>: [see 187]
+                                        str_ft_out() <void str_ft_out (char *p, int end) at subs.c:836> (R): [see 396]
+                                    malloc()
+                                    get_symsel() <char *get_symsel (struct symsel_s *symsel, char *p) at parse.c:4691>:
+                                        strtod()
+                                        sscanf()
+                                    clef_def() <void clef_def (struct SYMBOL *s) at parse.c:3641>:
+                                        isspace()
+                                        get_str() <char *get_str (char *d, char *s, int maxlen) at abcparse.c:1025>: [see 568]
+                                        getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                        strlen()
+                                        strcpy()
+                                        strncmp()
+                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                        get_clef() <void get_clef (struct SYMBOL *s) at parse.c:3578>:
+                                            is_tune_sig() <int is_tune_sig (void) at parse.c:3557>:
+                                            sym_link() <void sym_link (struct SYMBOL *s, int type) at parse.c:113>: [see 672]
+                                    deco_add() <void deco_add (char *s) at deco.c:807>:
+                                        strlen()
+                                        malloc()
+                                        strcpy()
+                                    set_voice_param() <void set_voice_param (struct VOICE_S *p_voice, int state, char *w, char *p) at format.c:915>:
+                                        strlen()
+                                        strncmp()
+                                        get_posit() <int get_posit (char *p) at format.c:620>:
+                                            strcmp()
+                                        strcmp()
+                                        get_bool() <int get_bool (char *p) at format.c:680>:
+                                            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                    open_file() <FILE *open_file (char *fn, char *ext, char *rfn) at abcm2ps.c:90>: [see 461]
+                                    fgets()
+                                    sscanf()
+                                    fclose()
+                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                    bskip() <void bskip (float h) at buffer.c:747>: [see 1132]
+                                    buffer_eob() <void buffer_eob (int eot) at buffer.c:930>: [see 1134]
+                                    glyph_add() <void glyph_add (char *p) at glyph.c:211>:
+                                        strtoul()
+                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                        isspace()
+                                        calloc()
+                                        strdup()
+                                    get_map() <void get_map (char *p) at parse.c:4837>:
+                                        isspace()
+                                        strncmp()
+                                        parse_acc_pit() <char *parse_acc_pit (char *p, int *pit, int *acc) at abcparse.c:1533>: [see 548]
+                                        getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                        strncpy()
+                                        memset()
+                                        get_color() <int get_color (char *p) at parse.c:4723>
+                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                    scan_u() <float scan_u (char *str, int type) at format.c:592>:
+                                        sscanf()
+                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                        strncasecmp()
+                                    generate() <void generate (void) at parse.c:1001>: [see 715]
+                                    get_bposy() <float get_bposy (void) at buffer.c:992>:
+                                    write_buffer() <void write_buffer (void) at buffer.c:772> (R): [see 80]
+                                    isspace()
+                                    atoi()
+                                    isdigit()
+                                    close_page() <void close_page (void) at buffer.c:303>: [see 418]
+                                    strchr()
+                                    sym_link() <void sym_link (struct SYMBOL *s, int type) at parse.c:113>: [see 672]
+                                    strcpy()
+                                    getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                    strtod()
+                                    get_staves() <void get_staves (struct SYMBOL *s) at parse.c:2252>:
+                                        memset()
+                                        parse_staves() <void parse_staves (struct SYMBOL *s, struct staff_s *staves) at parse.c:2073>:
+                                            isspace()
+                                            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                            isalnum()
+                                            strcmp()
+                                        voice_compress() <void voice_compress (void) at parse.c:444>: [see 717]
+                                        voice_dup() <void voice_dup (void) at parse.c:573>: [see 725]
+                                        sym_link() <void sym_link (struct SYMBOL *s, int type) at parse.c:113>: [see 672]
+                                        system_new() <void system_new (void) at parse.c:634>: [see 655]
+                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                        memcpy()
+                                        voice_link() <void voice_link (struct VOICE_S *p_voice) at parse.c:1919>:
+                                    tblt_parse() <struct tblt_s *tblt_parse (char *p) at format.c:753>:
+                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                        isspace()
+                                        malloc()
+                                        memset()
+                                        strncmp()
+                                        strchr()
+                                        toupper()
+                                        isdigit()
+                                        scan_u() <float scan_u (char *str, int type) at format.c:592>: [see 1278]
+                                        strdup()
+                                    get_transpose() <} int get_transpose (char *p) at parse.c:4751>
+                                    memcpy()
+                                    key_transpose() <void key_transpose (struct key_s *key) at parse.c:3762>:
+                                    free_voice_opt() <void free_voice_opt (struct voice_opt_s *opt) at parse.c:4712>:
+                                        free()
+                                    free()
+                                    memset()
+                                    process_pscomment() <struct SYMBOL *process_pscomment (struct SYMBOL *s) at parse.c:4994> (recursive: see 663) [see 663]
+                                    get_color() <int get_color (char *p) at parse.c:4723>
+                                    block_put() <void block_put (void) at buffer.c:891>: [see 1135]
+                                    interpret_fmt_line() <void interpret_fmt_line (char *w, char *p, int lock) at format.c:991>:
+                                        strcmp()
+                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                        get_str() <char *get_str (char *d, char *s, int maxlen) at abcparse.c:1025>: [see 568]
+                                        isalpha()
+                                        parse_encoding() <int parse_encoding (char *p) at format.c:617>:
+                                            strncasecmp()
+                                        isspace()
+                                        isdigit()
+                                        strtod()
+                                        get_font() <int get_font (const char *fname, int encoding) at format.c:171>: [see 31]
+                                        set_infoname() <void set_infoname (char *p) at format.c:315>: [see 41]
+                                        get_bool() <int get_bool (char *p) at format.c:680>: [see 1253]
+                                        strncmp()
+                                        g_fspc() <void g_fspc (char *p, struct FONTSPEC *f) at format.c:703>:
+                                            get_str() <char *get_str (char *d, char *s, int maxlen) at abcparse.c:1025>: [see 568]
+                                            isalpha()
+                                            parse_encoding() <int parse_encoding (char *p) at format.c:617>: [see 1334]
+                                            isspace()
+                                            strtod()
+                                            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                            fontspec() <void fontspec (struct FONTSPEC *f, const char *name, int encoding, float size) at format.c:228>: [see 30]
+                                            strcmp()
+                                            pg_reset_font() <void pg_reset_font (void) at subs.c:335>:
+                                        strlen()
+                                        sscanf()
+                                        get_dblrepbar() <int get_dblrepbar (char *p) at format.c:649>:
+                                        get_textopt() <int get_textopt (char *p) at format.c:634>: [see 1183]
+                                        strstr()
+                                        scan_u() <float scan_u (char *str, int type) at format.c:592>: [see 1278]
+                                        getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                        strcpy()
+                                        svg_font_switch() <void svg_font_switch (void) at svg.c:721>:
+                                get_key() <void get_key (struct SYMBOL *s) at parse.c:3825>:
+                                    set_k_acc() <void set_k_acc (struct SYMBOL *s) at parse.c:3782>:
+                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                    memcpy()
+                                    key_transpose() <void key_transpose (struct key_s *key) at parse.c:3762>: [see 1321]
+                                    memset()
+                                    note_transpose() <void note_transpose (struct SYMBOL *s) at parse.c:1092>:
+                                        acc_same_pitch() <int acc_same_pitch (int pitch) at parse.c:1045>:
+                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                    is_tune_sig() <int is_tune_sig (void) at parse.c:3557>: [see 1241]
+                                    sym_link() <void sym_link (struct SYMBOL *s, int type) at parse.c:113>: [see 672]
+                                bskip() <void bskip (float h) at buffer.c:747>: [see 1132]
+                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                write_heading() <void write_heading (void) at subs.c:1711>:
+                                    write_headform() <void write_headform (float lwidth) at subs.c:1496>:
+                                        memset()
+                                        memcpy()
+                                        isspace()
+                                        str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                        a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                        trim_title() <char *trim_title (char *p, struct SYMBOL *title) at subs.c:1411>:
+                                            strrchr()
+                                            isupper()
+                                            strlen()
+                                            strchr()
+                                            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                            sprintf()
+                                            strcpy()
+                                            cap_str() <void cap_str (char *p) at subs.c:104>:
+                                                toupper()
+                                        strncpy()
+                                        strlen()
+                                        tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                                        str_out() <void str_out (char *p, int action) at subs.c:914> (R): [see 342]
+                                        put_inf2r() <void put_inf2r (struct SYMBOL *s1, struct SYMBOL *s2, int action) at subs.c:1002>:
+                                            trim_title() <char *trim_title (char *p, struct SYMBOL *title) at subs.c:1411>: [see 1382]
+                                            strncpy()
+                                            strlen()
+                                            put_str() <void put_str (char *str, int action) at subs.c:981>: [see 970]
+                                        tempo_width() <float tempo_width (struct SYMBOL *s) at deco.c:2380>: [see 991]
+                                        write_tempo() <void write_tempo (struct SYMBOL *s, int beat, float sc) at deco.c:2407>: [see 998]
+                                        bskip() <void bskip (float h) at buffer.c:747>: [see 1132]
+                                    bskip() <void bskip (float h) at buffer.c:747>: [see 1132]
+                                    write_title() <void write_title (struct SYMBOL *s) at subs.c:1464>:
+                                        bskip() <void bskip (float h) at buffer.c:747>: [see 1132]
+                                        str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                        a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                        trim_title() <char *trim_title (char *p, struct SYMBOL *title) at subs.c:1411>: [see 1382]
+                                        put_str() <void put_str (char *str, int action) at subs.c:981>: [see 970]
+                                    str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                    put_inf() <void put_inf (struct SYMBOL *s) at subs.c:989>:
+                                        isspace()
+                                        put_str() <void put_str (char *str, int action) at subs.c:981>: [see 970]
+                                    put_inf2r() <void put_inf2r (struct SYMBOL *s1, struct SYMBOL *s2, int action) at subs.c:1002>: [see 1396]
+                                block_put() <void block_put (void) at buffer.c:891>: [see 1135]
+                                set_font() <void set_font (int ft) at format.c:1366> (R): [see 402]
+                                put_pdfmark() <void put_pdfmark (char *p) at parse.c:2472>:
+                                    trim_title() <char *trim_title (char *p, struct SYMBOL *title) at subs.c:1411>: [see 1382]
+                                    a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                reset_gen() <void reset_gen (void) at music.c:5145>:
+                                get_global_def() <struct SYMBOL *get_global_def (struct SYMBOL *s) at parse.c:2718> (R):
+                                    get_key() <void get_key (struct SYMBOL *s) at parse.c:3825>: [see 1362]
+                                    get_info() <struct SYMBOL *get_info (struct SYMBOL *s) at parse.c:2790> (recursive: see 661) [see 661]
+                                    check_header() <int check_header (struct SYMBOL *s) at parse.c:2669>: [see 667]
+                                    process_pscomment() <struct SYMBOL *process_pscomment (struct SYMBOL *s) at parse.c:4994> (R): [see 663]
+                                    set_global_def() <void set_global_def (void) at parse.c:2684>:
+                                voice_filter() <void voice_filter (void) at parse.c:2622>:
+                                    isspace()
+                                    regcomp()
+                                    regexec()
+                                    regfree()
+                                    getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                    memcpy()
+                                    process_pscomment() <struct SYMBOL *process_pscomment (struct SYMBOL *s) at parse.c:4994> (R): [see 663]
+                                set_tblt() <void set_tblt (struct VOICE_S *p_voice) at parse.c:3279>:
+                                    strcmp()
+                                get_meter() <void get_meter (struct SYMBOL *s) at parse.c:3970>:
+                                    memcpy()
+                                    is_tune_sig() <int is_tune_sig (void) at parse.c:3557>: [see 1241]
+                                    reset_gen() <void reset_gen (void) at music.c:5145>: [see 1422]
+                                    sym_link() <void sym_link (struct SYMBOL *s, int type) at parse.c:113>: [see 672]
+                                sym_link() <void sym_link (struct SYMBOL *s, int type) at parse.c:113>: [see 672]
+                                gen_ly() <void gen_ly (int eob) at parse.c:1031>: [see 714]
+                                write_title() <void write_title (struct SYMBOL *s) at subs.c:1464>: [see 1405]
+                                voice_init() <void voice_init (void) at parse.c:2455>:
+                                get_voice() <void get_voice (struct SYMBOL *s) at parse.c:3999>:
+                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                    voice_link() <void voice_link (struct VOICE_S *p_voice) at parse.c:1919>: [see 1307]
+                                    set_tblt() <void set_tblt (struct VOICE_S *p_voice) at parse.c:3279>: [see 1437]
+                                get_clef() <void get_clef (struct SYMBOL *s) at parse.c:3578>: [see 1240]
+                                get_lyric() <struct SYMBOL *get_lyric (struct SYMBOL *s) at parse.c:1671>:
+                                    process_pscomment() <struct SYMBOL *process_pscomment (struct SYMBOL *s) at parse.c:4994> (R): [see 663]
+                                    str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                    isspace()
+                                    next_lyric_note() <struct SYMBOL *next_lyric_note (struct SYMBOL *s) at parse.c:1664>:
+                                    getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                    memset()
+                                    isdigit()
+                                    tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                                    strlen()
+                                    strcpy()
+                                buffer_eob() <void buffer_eob (int eot) at buffer.c:930>: [see 1134]
+                                write_buffer() <void write_buffer (void) at buffer.c:772> (R): [see 80]
+                                close_page() <void close_page (void) at buffer.c:303>: [see 418]
+                                memcpy()
+                                save_maps() <void save_maps (void) at parse.c:2757>:
+                                    getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                    memcpy()
+                                tune_filter() <void tune_filter (struct SYMBOL *s) at parse.c:2566>:
+                                    tune_header_rebuild() <char *tune_header_rebuild (struct SYMBOL *s) at parse.c:2534>:
+                                        strlen()
+                                        malloc()
+                                        strcpy()
+                                    isspace()
+                                    regcomp()
+                                    regexec()
+                                    regfree()
+                                    strncmp()
+                                    getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                    memcpy()
+                                    process_pscomment() <struct SYMBOL *process_pscomment (struct SYMBOL *s) at parse.c:4994> (R): [see 663]
+                                    free()
+                                error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                            process_pscomment() <struct SYMBOL *process_pscomment (struct SYMBOL *s) at parse.c:4994> (R): [see 663]
+                            get_note() <void get_note (struct SYMBOL *s) at parse.c:4208>:
+                                sym_link() <void sym_link (struct SYMBOL *s, int type) at parse.c:113>: [see 672]
+                                note_transpose() <void note_transpose (struct SYMBOL *s) at parse.c:1092>: [see 1368]
+                                deco_cnv() <void deco_cnv (struct decos *dc, struct SYMBOL *s, struct SYMBOL *prev) at deco.c:1070>:
+                                    deco_intern() <unsigned char deco_intern (unsigned char ideco, struct SYMBOL *s) at deco.c:1043>:
+                                        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                        deco_define() <unsigned char deco_define (char *name) at deco.c:1020> (R):
+                                            strlen()
+                                            strncmp()
+                                            deco_build() <unsigned char deco_build (char *name, char *text) at deco.c:833> (R):
+                                                sscanf()
+                                                error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                                isspace()
+                                                get_deco() <int get_deco (char *name) at deco.c:819>: [see 884]
+                                                strcmp()
+                                                strlen()
+                                                malloc()
+                                                memcpy()
+                                                strdup()
+                                                strncmp()
+                                                strchr()
+                                                strcpy()
+                                                deco_define() <unsigned char deco_define (char *name) at deco.c:1020> (recursive: see 1494) [see 1494]
+                                        strcmp()
+                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                    strcmp()
+                                    strlen()
+                                    set_feathered_beam() <void set_feathered_beam (struct SYMBOL *s1, int accel) at deco.c:973>:
+                                        lroundf()
+                                set_map() <void set_map (struct SYMBOL *s) at parse.c:4160>:
+                                    strcmp()
+                                sort_pitch() <void sort_pitch (struct SYMBOL *s) at parse.c:4120>: [see 797]
+                                identify_note() <void identify_note (struct SYMBOL *s, int dur, int *p_head, int *p_dots, int *p_flags) at parse.c:3056>: [see 1002]
+                                gch_build() <void gch_build (struct SYMBOL *s) at parse.c:1424>:
+                                    getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                    memset()
+                                    gch_transpose() <void gch_transpose (struct SYMBOL *s) at parse.c:1386>:
+                                        strchr()
+                                        gch_tr1() <void gch_tr1 (struct SYMBOL *s, int i, int i2) at parse.c:1219>:
+                                            getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                            strlen()
+                                            memcpy()
+                                            sprintf()
+                                            strchr()
+                                            strcpy()
+                                    gch_capo() <void gch_capo (struct SYMBOL *s) at parse.c:1344>:
+                                        strchr()
+                                        strlen()
+                                        getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                        strncpy()
+                                        sprintf()
+                                        strcpy()
+                                        gch_tr1() <void gch_tr1 (struct SYMBOL *s, int i, int i2) at parse.c:1219>: [see 1526]
+                                    strchr()
+                                    sscanf()
+                                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                    strlen()
+                                    memmove()
+                                    str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                    tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                            get_over() <void get_over (struct SYMBOL *s) at parse.c:1934>:
+                                error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                memcpy()
+                                voice_link() <void voice_link (struct VOICE_S *p_voice) at parse.c:1919>: [see 1307]
+                                strcpy()
+                            get_bar() <void get_bar (struct SYMBOL *s) at parse.c:3177>:
+                                adjust_dur() <void adjust_dur (struct SYMBOL *s) at parse.c:3116>:
+                                    identify_note() <void identify_note (struct SYMBOL *s, int dur, int *p_head, int *p_dots, int *p_flags) at parse.c:3056>: [see 1002]
+                                gch_build() <void gch_build (struct SYMBOL *s) at parse.c:1424>: [see 1521]
+                                sym_link() <void sym_link (struct SYMBOL *s, int type) at parse.c:113>: [see 672]
+                                deco_cnv() <void deco_cnv (struct decos *dc, struct SYMBOL *s, struct SYMBOL *prev) at deco.c:1070>: [see 1491]
+                                getarena() <void *getarena (int len) at abcm2ps.c:1068>: [see 42]
+                                memset()
+                                str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                            get_clef() <void get_clef (struct SYMBOL *s) at parse.c:3578>: [see 1240]
+                            generate() <void generate (void) at parse.c:1001>: [see 715]
+                            buffer_eob() <void buffer_eob (int eot) at buffer.c:930>: [see 1134]
+                            sym_link() <void sym_link (struct SYMBOL *s, int type) at parse.c:113>: [see 672]
+                            gch_build() <void gch_build (struct SYMBOL *s) at parse.c:1424>: [see 1521]
+                            deco_cnv() <void deco_cnv (struct decos *dc, struct SYMBOL *s, struct SYMBOL *prev) at deco.c:1070>: [see 1491]
+                            error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                            sym_add() <struct SYMBOL *sym_add (struct VOICE_S *p_voice, int type) at parse.c:137>: [see 721]
+                            set_tuplet() <void set_tuplet (struct SYMBOL *t) at parse.c:5963>:
+                                error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                                sym_link() <void sym_link (struct SYMBOL *s, int type) at parse.c:113>: [see 672]
+                            gen_ly() <void gen_ly (int eob) at parse.c:1031>: [see 714]
+                            put_history() <void put_history (void) at subs.c:1368>:
+                                bskip() <void bskip (float h) at buffer.c:747>: [see 1132]
+                                str_font() <void str_font (int ft) at subs.c:763>: [see 320]
+                                get_str() <char *get_str (char *d, char *s, int maxlen) at abcparse.c:1025>: [see 568]
+                                tex_str() <float tex_str (char *s) at subs.c:145>: [see 323]
+                                set_font() <void set_font (int ft) at format.c:1366> (R): [see 402]
+                                a2b() <void a2b (char *fmt, ...) at buffer.c:728> (R): [see 349]
+                                str_out() <void str_out (char *p, int action) at subs.c:914> (R): [see 342]
+                                put_inf() <void put_inf (struct SYMBOL *s) at subs.c:989>: [see 1413]
+                                put_str() <void put_str (char *str, int action) at subs.c:981>: [see 970]
+                                buffer_eob() <void buffer_eob (int eot) at buffer.c:930>: [see 1134]
+                            write_eps() <void write_eps (void) at buffer.c:664>: [see 1139]
+                            write_buffer() <void write_buffer (void) at buffer.c:772> (R): [see 80]
+                            memcpy()
+                            free()
+                        lvlarena() <int lvlarena (int level) at abcm2ps.c:1057>: [see 614]
+                        syntax() <void syntax (char *msg, char *q) at abcparse.c:2606>: [see 510]
+                strcpy()
+                isalpha()
+                strncasecmp()
+                include_file() <void include_file (unsigned char *fn) at abcm2ps.c:236> (R):
+                    error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+                    treat_file() <void treat_file (char *fn, char *ext) at abcm2ps.c:183> (recursive: see 450) [see 450]
+                free()
+                strdup()
+                tune_select() <int tune_select (unsigned char *s) at front.c:396>:
+                    isdigit()
+                    strtod()
+                    sscanf()
+                    fprintf()
+                    memcpy()
+                    regcomp()
+                    regexec()
+                    regfree()
+                txt_add_cnv() <void txt_add_cnv (unsigned char *s, int sz, int comment) at front.c:112>:
+                    txt_add() <void txt_add (unsigned char *s, int sz) at front.c:92>: [see 491]
+                    isxdigit()
+                abc_eof() <void abc_eof (void) at abcparse.c:197>:
+                    do_tune() <void do_tune (void) at parse.c:3303>: [see 649]
+                    memcpy()
+            free()
+            clrarena() <void clrarena (int level) at abcm2ps.c:1043>: [see 24]
+    treat_abc_file() <void treat_abc_file (char *fn) at abcm2ps.c:252>:
+        lvlarena() <int lvlarena (int level) at abcm2ps.c:1057>: [see 614]
+        treat_file() <void treat_file (char *fn, char *ext) at abcm2ps.c:183> (R): [see 450]
+        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+        exit()
+        open_file() <FILE *open_file (char *fn, char *ext, char *rfn) at abcm2ps.c:90>: [see 461]
+        fseek()
+        fclose()
+        ftell()
+        rewind()
+        fileno()
+        mmap()
+        malloc()
+        fread()
+        free()
+        strdup()
+        strncmp()
+        fwrite()
+        memcpy()
+        frontend() <void frontend (unsigned char *s, int ftype, char *fname, int linenum) at front.c:471> (R): [see 483]
+        clrarena() <void clrarena (int level) at abcm2ps.c:1043>: [see 24]
+        munmap()
+        strerror()
+    frontend() <void frontend (unsigned char *s, int ftype, char *fname, int linenum) at front.c:471> (R): [see 483]
+    lock_fmt() <void lock_fmt (void *fmt) at format.c:1354>: [see 28]
+    cmdtblt_parse() <struct cmdtblt_s *cmdtblt_parse (char *p) at abcm2ps.c:518>:
+        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+    set_opt() <void set_opt (char *w, char *v) at abcm2ps.c:543>:
+        strlen()
+        error() <void error (int sev, struct SYMBOL *s, char *fmt, ...) at subs.c:82>: [see 12]
+        sprintf()
+        strcmp()
+        frontend() <void frontend (unsigned char *s, int ftype, char *fname, int linenum) at front.c:471> (R): [see 483]
+    make_font_list() <void make_font_list (void) at format.c:302>: [see 312]
+    do_tune() <void do_tune (void) at parse.c:3303>: [see 649]
+    print_format() <void print_format (void) at format.c:473>:
+        printf()
+    isdigit()
+    treat_file() <void treat_file (char *fn, char *ext) at abcm2ps.c:183> (R): [see 450]
+    exit()
+    buffer_eob() <void buffer_eob (int eot) at buffer.c:930>: [see 1134]
+    write_buffer() <void write_buffer (void) at buffer.c:772> (R): [see 80]
+    close_output_file() <void close_output_file (void) at buffer.c:265> (R): [see 78]
